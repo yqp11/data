@@ -1,0 +1,224 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="../static/js/jquery.js"></script>
+<link rel="stylesheet" href="comon0.css">
+</head>
+<body>
+<div class="loading">
+  <div class="loadbox"> <img src="./images/loading.gif"> 页面加载中... </div>
+</div>
+<div class="head">
+  <h1><a href="../index.html">传染病数据分析</a></h1>
+  <div class="time" id="showTime">2019/11/29 0:12:42</div>
+		<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+		var t = null;
+       document.getElementById("showTime").innerHTML = y+"/"+Appendzero(mt)+"/"+Appendzero(day)+" "+Appendzero(h)+":"+Appendzero(m)+":"+Appendzero(s)+"";
+        function Appendzero(obj){
+			if(obj<10) return "0" +""+ obj;
+			else return obj;
+		 }
+		t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	
+</div>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+      <div class="boxall" style="height: calc(40% - .15rem)">
+        <div class="alltitle">地区分布</div>
+        <div class="sycm">
+          <ul class="clearfix">
+            <li>
+              <h2>1824</h2>
+              <span>华东地区</span></li>
+            <li>
+              <h2>1920</h2>
+              <span>华西地区</span></li>
+            <li>
+              <h2>1800</h2>
+              <span>华南地区</span></li>
+         
+            <li>
+              <h2>1824</h2>
+              <span>华北地区</span></li>
+           
+          </ul>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: calc(60% - .15rem)">
+        <div class="alltitle">传染病类型</div>
+   <div class="sycm sycm2">
+          <ul class="clearfix">
+            <li>
+              <h2>18204</h2>
+              <span>猴痘</span></li>
+            <li>
+              <h2>16920</h2>
+              <span>淋病</span></li>
+            <li>
+              <h2>69089</h2>
+              <span>肺结核</span></li>
+         
+            <li>
+              <h2>71824</h2>
+              <span>血吸虫病</span></li>
+           <li>
+              <h2>49789</h2>
+              <span>登革热</span></li>
+         
+            <li>
+              <h2>91824</h2>
+              <span>布鲁氏菌病</span></li>
+           
+          </ul>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+      
+    </li>
+    <li>
+     <div style="position: relative">
+		<div class="barnav">
+			
+			 <div class="bar">
+        <div class="barbox">
+          <ul class="clearfix">
+            <li class="pulll_left counter">13023069</li>
+            <li class="pulll_left counter">12072402</li>
+            <li class="pulll_left counter">950667</li>
+          </ul>
+        </div>
+
+        <div class="barbox2">
+          <ul class="clearfix">
+            <li class="pulll_left">累计确诊</li>
+            <li class="pulll_left">累计治愈</li>
+            <li class="pulll_left">累计死亡</li>
+          </ul>
+        </div>
+		  
+      </div>
+		</div>
+		 </div>
+      <div class="mapbox">
+		<div class="map">
+        <div class="map1"><img src="images/lbx.png"></div>
+        <div class="map2"><img src="images/jt.png"></div>
+        <div class="map3"><img src="images/map.png"></div>
+        <div class="map4" id="map_1"></div>
+      </div>
+		</div>
+    </li>
+    <li>
+      
+		<div class="boxall" style="height: calc(50% - .15rem)">
+        <div class="alltitle">累计<div class="pulll_right">
+			<a href="#"><span></span>患病人数</a>
+			<a href="#"><span></span>已治愈</a>
+			</div></div>
+        
+        <div class="boxnav" id="echart3"></div>
+        
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: calc(50% - .15rem)">
+        <div class="alltitle">统计</div>
+        <div class="wrap boxnav">
+          <ul>
+            <li><p><span>阿米巴性痢疾</span><span>无症状带虫者</span><span>急性非典阿米巴肠病</span></p></li>
+            <li><p><span>伤寒</span><span>轻型伤寒</span><span>爆发型伤寒</span></p></li>
+            <li><p><span>细菌性痢疾</span><span>典型症状</span><span>伴随症状</span></p></li>
+            <li><p><span>流行性乙型脑炎</span><span>普通型</span><span>重型</span></p></li>
+            <li><p><span>病毒性肝炎</span><span>甲型肝炎</span><span>肝炎肝硬化</span></p></li>
+            <li><p><span>艾滋病</span><span>肺型艾滋病</span><span>中枢神经系统性艾滋病</span></p></li>
+            <li><p><span>狂犬病</span><span>狂燥型</span><span>麻痹型</span></p></li>
+          </ul>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+    </li>
+  </ul>
+ 
+</div>
+	
+	<div class="mainbox2">
+  <ul class="clearfix">
+    <li>
+		
+		<div class="boxall" style="height: 100%">
+        <div class="alltitle">全民检测
+			<div class="pulll_right">
+			<a href="#"><span></span>已检点</a>
+			<a href="#"><span></span>未检点</a>
+			</div>
+			</div>
+       <div class="boxnav">
+		  <ul class="btbox">
+		   <li id="bt01"></li>
+		   <li id="bt02"></li>
+		   <li id="bt03"></li>
+		   <li id="bt04"></li>
+		   </ul>
+		  </div>
+        <div class="boxfoot"></div>
+      </div>
+		
+    </li>
+	  <li>
+		  <div class="boxall" style="height:100%">
+        <div class="alltitle">数据采集
+			  <div class="pulll_right sebtn" >
+			<a href="#" class="active">近七天</a>
+		
+			</div>
+			  </div>
+         <div class="boxnav" id="echart4"></div>
+        
+        
+        <div class="boxfoot"></div>
+      </div>
+	  </li>
+	  
+		</ul>
+		</div>
+
+<script language="JavaScript" src="../static/js/js.js"></script> 
+<script type="text/javascript" src="../static/js/echarts.min.js"></script> 
+<script type="text/javascript" src="../static/js/china.js"></script> 
+<script type="text/javascript" src="../static/js/area_echarts.js"></script> 
+<script src="../static/js/jquery.liMarquee.js"></script> 
+<script>
+$(function(){
+	$('.wrap,.adduser').liMarquee({
+		direction: 'up',//身上滚动 
+		runshort: false,//内容不足时不滚动
+		scrollamount: 20//速度
+	});
+});
+	
+</script> 
+
+
+<script type="text/javascript">
+		$('.counter').countUp();
+  </script>
+</body>
+</html>
